@@ -1,0 +1,14 @@
+create table product(p_code int primary key,p_name varchar(30),category varchar(30),quantity int,price int);
+insert into product values(1000,'lux','soap',150,40);
+insert into product values(1001,'tt','paste',150,40);
+insert into product values(1002,'santhoor','barsoap',100,25);
+insert into product values(1003,'queen','washing powder',250,30);
+insert into product values(1004,'colgate','paste',500,50);
+select * from product;
+select * from product where price between 20 and 50;
+select * from product where category not in('soap');
+select * from product where quantity <100 or quantity >400;
+select * from product where p_name like 's%';
+select * from product where category not in('paste');
+select * from product where p_name like '_u%';
+select * from product order by p_name desc;

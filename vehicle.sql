@@ -1,0 +1,13 @@
+create table vehicles(v_id varchar(20)primary key,v_name varchar(20),category varchar(20),stock int,price int);
+insert into vehicles values('KL001','audi','fwheeler',2,90000);
+insert into vehicles values('KL002','duke','twheeler',3,70000);
+insert into vehicles values('KL003','nano','fwheeler',4,60000);
+insert into vehicles values('KL004','bmw','fwheeler',5,100000);
+insert into vehicles values('KL005','auto','fwheeler',6,20000);
+update vehicles set v_name='Auto' where v_id='KL005'; 
+select * from vehicles order by v_name desc;
+select v_name,category from vehicles where price>60000 and price<=90000;
+select v_id,v_name,price from vehicles where category in('fwheeler','twheeler');
+select * from vehicles where stock>3 and stock<10;
+select * from vehicles where v_name like 'A%' or v_name like 'a%';
+select * from vehicles where category not in('fwheeler');
